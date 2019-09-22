@@ -59,7 +59,7 @@ int main ()
 
   /* Code here */
   
-  cout<<"Print n: ";
+  cout<<"Print n:  ";
   cin>>n;
   search(0); 
   //fclose (stdin);
