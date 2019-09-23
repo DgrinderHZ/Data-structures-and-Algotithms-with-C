@@ -77,11 +77,22 @@ int main ()
     cin >> c; 
     coins.pb(c);
   }
+  
+  // using a for loop
+    value[0] = 0;
+    for(int i = 1; i < 999; i++){
+    	value[i] = INF - 9;
+    	for(auto c: coins) if(i-c >=0 ){
+    		value[i] = min(value[i], value[i-c]+1);
+		}
+	}
+	
    cin >> n;
    while(n--){
    	cin >> x;
    	
-    cout << solve(x) <<endl;
-   }
+    cout << value[x] <<endl;
+ }
+    
   return 0;
 }
